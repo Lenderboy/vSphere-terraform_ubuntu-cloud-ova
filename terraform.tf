@@ -58,7 +58,7 @@ resource "vsphere_virtual_machine" "vm" {
   }
 
   vapp {
-    properties {
+    properties = {
       user-data = "${base64encode(file("cloud-init.yml"))}"
     }
   }
